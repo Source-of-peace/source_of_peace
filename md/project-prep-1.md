@@ -133,7 +133,7 @@
   * Start of the day, everyone pulls down the latest code
     * Have checkpoints
     * Maybe once a day?
-* **Will you be using a PR review workflow? If so, consider:**
+* **Will you be using a PR review workflow? If so, consider:** 
   * How many people must review a PR?
     * 2
   * Who merges PRs?
