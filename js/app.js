@@ -1,17 +1,24 @@
 'use strict';
 
 // Global Variables
-// Jamison
+let parentName = document.getElementById('userName')
 
 // User Constructor
-let UserProfile = function(name, timer, logs) {
+let UserProfile = function (name, timer, logs) {
   this.name = name;
   this.timer = timer;
   this.logs = logs;
 };
 
 // Display name function
+function userInfo(event) {
+  event.preventDefault();
+  let userEntry = event.target.name.value;
 
+  event.target.name.value = '';
+  new UserProfile(userEntry);
+}
+parentName.addEventListener('submit',userInfo);
 // Take in ID from HTML
 // DOM to create a form
 // Populate the form on homepage/DOM to capture data
