@@ -3,7 +3,7 @@ body {
   color: rgb(167, 155, 211);
   }
 
-  header {
+header {
     background-color: #444;
     height: 100px;
     opacity: 0.8;
@@ -13,14 +13,29 @@ body {
     margin-top: 33px;
   }
 
-  header img {
+
+header img {
+  position: relative;
     margin-top: 15px;
     float: left;
     margin-left: 55px;
     width: 111px;
   }
 
-  footer {
+h1 {
+ font-family: 'Lobster Two', cursive;
+ font-size: 4em;
+ color: rgb(94, 2, 131);
+ position: absolute;
+ margin-left: 27.5%;
+ margin-top: 15px;
+}
+
+#header-nav {
+  float: right;
+}
+
+footer {
     height: 100px;
     background-color: #444;
     opacity: 0.8;
@@ -30,14 +45,22 @@ body {
     margin-bottom: 15px;
   }
 
-  footer img {
+footer img {
+  position: relative;
     margin-top: 15px;
     float: left;
     margin-left: 55px;
     width: 111px;
   }
+
+  h2 {
+    font-family: 'Viaoda Libre', cursive;
+    position: relative;
+    margin-left: 46%;
+    padding-top: 50px;
+   }
   
-  .center {
+.center {
     display: block;
     margin-left: auto;
     margin-right: auto;
