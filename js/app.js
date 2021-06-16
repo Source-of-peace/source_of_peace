@@ -1,7 +1,7 @@
 'use strict';
 
 // Global Variables
-
+// Jamison
 
 // User Constructor
 let UserProfile = function(name, timer, logs) {
