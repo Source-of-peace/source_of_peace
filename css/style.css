@@ -75,13 +75,27 @@ section {
 }
 
 #div-left{
-  margin-right: 130px;
+  /* margin-right: 130px; */
   height: 90vh;
+  width: 50vw;
+  padding-left: 50px;
+  padding-top: 50px;
 }
 
 #div-right{
-  margin-left: 130px;
+  /* margin-left: 130px; */
   height: 90vh;
+  width: 50vw;
+}
+
+#welcomeGreeting {
+  color: rgb(54, 37, 209);
+  font-size: 2em;
+  font-weight: bolder;
+  line-height: 1.5;
+  font-family: 'Charm', cursive;
+  padding-top: 50px;
+  width: 40%;
 }
   
 
