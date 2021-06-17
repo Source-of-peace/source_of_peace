@@ -8,7 +8,7 @@ let UserProfile = function (name, timer, logs) {
   this.name = name;
   this.timer = timer;
   this.logs = logs;
-  this.callPrototypeFunctions();
+  // this.callPrototypeFunctions();
 };
 
 // This is where you put all prototype functions for the UserProfile construer!!!!
@@ -26,20 +26,18 @@ UserProfile.prototype.displayWelcomeGreeting = function () {
   } else {
     greeting = `${this.name}, I Don't Want To Alarm You! But I Don't Know What Time It Is, Just Breath And It Will All Be Ok.`;
   }
-
+  let divRight = document.getElementById('div-right');
   let greetingDisplay = document.createElement('article');
-
-
-  greetingDisplay.textContent = this.displayWelcomeGreeting;
-
+  greetingDisplay.setAttribute('id','welcomeGreeting');
+  greetingDisplay.textContent = greeting;
+  divRight.appendChild(greetingDisplay)
 };
     
 
 
-UserProfile.prototype.callPrototypeFunctions = function () {
-  this.displayWelcomeGreeting();
-  this.displayWelcomeGreeting();
-};
+// UserProfile.prototype.callPrototypeFunctions = function () {
+  
+// };
 
 // Display name function
 function userInfo(event) {
@@ -47,7 +45,8 @@ function userInfo(event) {
   let userEntry = event.target.name.value;
 
   event.target.name.value = '';
-  new UserProfile(userEntry);
+  let user = new UserProfile(userEntry);
+  user.displayWelcomeGreeting();
 }
 parentName.addEventListener('submit', userInfo);
 // Take in ID from HTML
