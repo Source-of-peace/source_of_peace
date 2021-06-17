@@ -1,33 +1,42 @@
 body {
   background-color: black;
   color: rgb(167, 155, 211);
-  }
+}
+
+body {
+  background-image: url(../img/purple-flower.png);
+  background-repeat: no-repeat;
+  background-size: 100vh;
+  background-position: center;
+  background-attachment: local;
+    
+}
 
 header {
-    background-color: #444;
-    height: 100px;
-    opacity: 0.8;
-    border-radius: 15px;
-    width: 90%;
-    margin: auto;
-    margin-top: 33px;
-  }
+  background-color: rgba(68, 68, 68, 0);
+  height: 100px;
+  opacity: 0.8;
+  border-radius: 15px;
+  width: 90%;
+  margin: auto;
+  margin-top: 33px;
+}
 
 
 header img {
   position: relative;
-    margin-top: 15px;
-    float: left;
-    margin-left: 55px;
-    width: 111px;
-  }
+  margin-top: 15px;
+  float: left;
+  margin-left: 55px;
+  width: 111px;
+}
 
 h1 {
  font-family: 'Lobster Two', cursive;
- font-size: 4em;
+ font-size: 3em;
  color: rgb(94, 2, 131);
- position: absolute;
- margin-left: 27.5%;
+ position: relative;
+ margin-left: 38.5%;
  margin-top: 15px;
 }
 
@@ -36,33 +45,58 @@ h1 {
 }
 
 footer {
-    height: 100px;
-    background-color: #444;
-    opacity: 0.8;
-    border-radius: 15px;
-    width: 90%;
-    margin: auto;
-    margin-bottom: 15px;
-  }
+  height: 100px;
+  background-color: rgba(68, 68, 68, 0);
+  opacity: 0.8;
+  border-radius: 15px;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 15px;
+}
 
 footer img {
   position: relative;
-    margin-top: 15px;
-    float: left;
-    margin-left: 55px;
-    width: 111px;
-  }
+  margin-top: 15px;
+  float: left;
+  margin-left: 55px;
+  width: 111px;
+}
 
-  h2 {
-    font-family: 'Viaoda Libre', cursive;
-    position: relative;
-    margin-left: 46%;
-    padding-top: 50px;
-   }
+h2 {
+  font-family: 'Viaoda Libre', cursive;
+  position: relative;
+  margin-left: 44%;
+  padding-top: 50px;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#div-left{
+  /* margin-right: 130px; */
+  height: 90vh;
+  width: 50vw;
+  padding-left: 50px;
+  padding-top: 50px;
+}
+
+#div-right{
+  /* margin-left: 130px; */
+  height: 90vh;
+  width: 50vw;
+}
+
+#welcomeGreeting {
+  color: rgb(54, 37, 209);
+  font-size: 2em;
+  font-weight: bolder;
+  line-height: 1.5;
+  font-family: 'Charm', cursive;
+  padding-top: 50px;
+  width: 40%;
+}
   
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
+
+

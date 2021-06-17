@@ -1,14 +1,55 @@
 'use strict';
 
 // Global Variables
-let parentName = document.getElementById('userName')
+let parentName = document.getElementById('userName');
+const userArray = [];
 
 // User Constructor
 let UserProfile = function (name, timer, logs) {
   this.name = name;
   this.timer = timer;
   this.logs = logs;
+  userArray.push(this);
+  // this.callPrototypeFunctions();
 };
+
+// This is where you put all prototype functions for the UserProfile construer!!!!
+UserProfile.prototype.displayWelcomeGreeting = function () {
+  let today = new Date();
+  let hourNow = today.getHours();
+  let greeting;
+
+  if (hourNow > 18) {
+    greeting = `Good Evening ${this.name}, <b/>
+     Making Time For Your Self Even After A Long Day, <br/> Will Result In Positive Habits, <br/>
+    To Form.`;
+  } else if (hourNow > 12) {
+    greeting = `Good Afternoon ${this.name}, <br/>  
+    Whatever The Weather, <br/>
+    It's A Beautiful Day To Just Take In A Deep Breath And Remember, <br/>
+    It's Free.`;
+  } else if (hourNow > 0) {
+    greeting = `Good Morning ${this.name}, <br/>
+    It's A Great Day To Make Time For Your Self, <br/>
+    Keep Setting Healthy Habit's.`;
+  } else {
+    greeting = `${this.name}, <br/>
+    I Don't Want To Alarm You! <br/>
+    But I Don't Know What Time It Is, <br/>
+    Just Breath And It Will All Be Ok.`;
+  }
+  let divLeft = document.getElementById('div-left');
+  let greetingDisplay = document.createElement('article');
+  greetingDisplay.setAttribute('id','welcomeGreeting');
+  greetingDisplay.innerHTML = greeting;
+  divLeft.appendChild(greetingDisplay)
+};
+    
+
+
+// UserProfile.prototype.callPrototypeFunctions = function () {
+  
+// };
 
 // Display name function
 function userInfo(event) {
@@ -16,9 +57,10 @@ function userInfo(event) {
   let userEntry = event.target.name.value;
 
   event.target.name.value = '';
-  new UserProfile(userEntry);
+  let user = new UserProfile(userEntry);
+  user.displayWelcomeGreeting();
 }
-parentName.addEventListener('submit',userInfo);
+parentName.addEventListener('submit', userInfo);
 // Take in ID from HTML
 // DOM to create a form
 // Populate the form on homepage/DOM to capture data
