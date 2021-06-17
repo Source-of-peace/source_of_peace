@@ -41,10 +41,63 @@ parentName.addEventListener('submit',userInfo);
 
 // Display Greeting
 // this.name + time() save to variable
-// Greeting Function: Display variable(name)through DOM on HTML page through an ID 
+// Greeting Function: Display variable(name)through DOM on HTML page through an ID
 // *** Stretch goal 30 second
 
 // Button to start timer, remove greeting
+// Main function
+let timerBox = document.createElement('p');
+let timerDOM = document.getElementById('timer');
+let timer = 60;
+function numberTimerTest(timer) { 
+  // append number to screen
+  timerBox.textContent = timer;
+  timerDOM.appendChild(timerBox);
+}
+function numberTestClear() {
+  // clear number to screen
+  let timerBox = document.querySelector('p');
+  timerBox.textContent = '';
+  timerDOM.appendChild(timerBox);
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+async function countTimer(timer) {
+  while(timer) {
+    // Advanced Method
+    numberTimerTest(timer);
+    await sleep(2000);
+    numberTestClear();
+    timer--;
+  }
+}
+// countTimer(timer);
+
+
+
+function countTimer201(timer) {
+  while (timer) {
+    setInterval(numberTimerTest, 20000);
+    // numberTestClear();
+      timer--;
+  }
+}
+countTimer201();
+
+function test() {
+  console.log('inside test');
+}
+
+// numberTimerTest(timer);
+//      Main function will have a for/while loop that will count down from set number
+//      Take in wait function `setInterval(DOMFunction, 1000)`
+// Create small function that just creates number from variable "i"
+// Create a for loop, this will count down, the 'i' will be a parameter to display which number
+
+
+
 
 // Notes:
 // 'required' -- place in form in HTML
