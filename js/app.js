@@ -53,11 +53,11 @@ UserProfile.prototype.displayWelcomeGreeting = function () {
   greetingDisplay.innerHTML = greeting;
   divLeft.appendChild(greetingDisplay)
 };
-    
+
 
 
 // UserProfile.prototype.callPrototypeFunctions = function () {
-  
+
 // };
 
 // Display name function
@@ -114,10 +114,49 @@ function countTimer1() { // adds 1 after function name because it will not run f
 // Greeting Function: Display variable(name)through DOM on HTML page through an ID
 // *** Stretch goal 30 second
 
-//Function to allow next chapter of Tao to load
-//Save reflections in local storage
-//Clear reflection page once submitted for next entry
+// ###### Readings Page ######
 
+// create 2 boxes
+// left box will quotes
+// right box will be logs
+
+// ###### Left Side ######
+// Place Quotes in an Array through constructor function
+// Display array in a Box
+
+// Event Function to allow next chapter of Tao to load
+//        Might be done with just the event listener
+// Have a button, box, or click on the quote/box with an event listener
+//      Have a variable++ inside event listener?
+
+// Make it so the user can go back to page one after cycling through
+//    Example, after last quote, goes back to first quote
+//    Make the position in the array[i]
+//    Make [i] a global variable
+//    [i]++ when event listener is clicked
+//    if i === last quote
+//      make i === 0
+
+
+// Stretch: Make it load from the beginning again
+
+
+
+// ###### Right Side ######
+// Create a form
+// Have a big enough box for user to type long passages
+// On submit
+//      Save reflections in local storage
+//      Save the quote that is being shown along side the log
+
+//
+
+
+// Clear reflection page once submitted for next entry???????????????
+
+
+
+// ###### Recording Page ######
 // When recording each log on Zen page
 // Attach index's to each (refer to lab 14b shopping cart)
 // display 2 tables
