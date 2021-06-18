@@ -1,6 +1,7 @@
 'use strict';
 
 // Global Variables
+
 let parentName = document.getElementById('userName'); // Form
 let timerBox = document.createElement('p'); // Timer number
 let timerDOM = document.getElementById('timer'); // Timer Box
@@ -8,13 +9,56 @@ let timer = 15; // CountDown Timer
 let sectionButton = document.getElementById('button'); // Button Box
 let buttonID = document.getElementById('buttonID'); // Button
 let countdown; // Setinterval Countdown
+const userArray = [];
+
 
 // User Constructor
 let UserProfile = function (name) {
   this.name = name;
   this.timer = timer;
   // this.logs = logs;
+  userArray.push(this);
+  // this.callPrototypeFunctions();
+
 };
+
+// This is where you put all prototype functions for the UserProfile construer!!!!
+UserProfile.prototype.displayWelcomeGreeting = function () {
+  let today = new Date();
+  let hourNow = today.getHours();
+  let greeting;
+
+  if (hourNow > 18) {
+    greeting = `Good Evening ${this.name}, <b/>
+     Making Time For Your Self Even After A Long Day, <br/> Will Result In Positive Habits, <br/>
+    To Form.`;
+  } else if (hourNow > 12) {
+    greeting = `Good Afternoon ${this.name}, <br/>  
+    Whatever The Weather, <br/>
+    It's A Beautiful Day To Just Take In A Deep Breath And Remember, <br/>
+    It's Free.`;
+  } else if (hourNow > 0) {
+    greeting = `Good Morning ${this.name}, <br/>
+    It's A Great Day To Make Time For Your Self, <br/>
+    Keep Setting Healthy Habit's.`;
+  } else {
+    greeting = `${this.name}, <br/>
+    I Don't Want To Alarm You! <br/>
+    But I Don't Know What Time It Is, <br/>
+    Just Breath And It Will All Be Ok.`;
+  }
+  let divLeft = document.getElementById('div-left');
+  let greetingDisplay = document.createElement('article');
+  greetingDisplay.setAttribute('id','welcomeGreeting');
+  greetingDisplay.innerHTML = greeting;
+  divLeft.appendChild(greetingDisplay)
+};
+    
+
+
+// UserProfile.prototype.callPrototypeFunctions = function () {
+  
+// };
 
 // Display name function
 function userInfo(event) {
@@ -22,13 +66,18 @@ function userInfo(event) {
   let userEntry = event.target.name.value;
 
   event.target.name.value = '';
+
   new UserProfile(userEntry);
 
   localStorage.setItem('savedUserData', JSON.stringify(new UserProfile(userEntry))); // Saving name to Local Storage
   parentName.remove();
-}
-parentName.addEventListener('submit',userInfo);
 // STRETCH: If statement -- If local storage present, do not show name form
+  let user = new UserProfile(userEntry);
+  user.displayWelcomeGreeting();
+}
+parentName.addEventListener('submit', userInfo);
+
+
 
 function startTimer(event) {
   countTimer1(); // Start Timer when Button Clicked
