@@ -72,8 +72,9 @@
 }
 
 /* #menu-content */
-#chapter-content a:hover {
-  background-color: #f1f1f12e
+#chapter-content option:hover {
+  background-color: #f1f1f12e;
+  cursor: pointer;
 }
 
 /* finder-menu */

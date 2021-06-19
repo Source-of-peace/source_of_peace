@@ -56,9 +56,27 @@ let readingObjectArray = [
   },
 ];
 
-
-
 let readingIndex = 0;
+
+function populateForm() {
+  const selectChapter = document.getElementById('chapter-content');
+  const optionDiv = document.createElement('div');
+  for (let i = 0; i < userLogArray.length; i++ ) {
+    let option = document.createElement('option');
+    option.textContent = userLogArray[i].name;
+    option.value = userLogArray[i].name;
+    optionDiv.appendChild(option);
+  }
+  selectChapter.appendChild(optionDiv);
+  optionDiv.addEventListener('click', optionClick);
+}
+
+function optionClick(){
+  alert('clicked');
+}
+populateForm();
+
+
 
 function backClick(event) {
   clearReading();
@@ -66,7 +84,6 @@ function backClick(event) {
   if (readingIndex === 0) {
     readingIndex === 2;
   }
-  // console.log(readingsArray[readingIndex]);
   displayTaoReadings();
 }
 back.addEventListener('click', backClick);
@@ -100,6 +117,7 @@ function clearReading() {
 }
 
 // const selectElement = document.querySelector('.readingChapters');
+
 
 // selectElement.addEventListener('change', (event) => {
 
