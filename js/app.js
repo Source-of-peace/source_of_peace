@@ -3,6 +3,7 @@
 // Global Variables
 
 let parentName = document.getElementById('userName'); // Form
+let parentTimer = document.getElementById('userTimer');
 let timerBox = document.createElement('p'); // Timer number
 let timerDOM = document.getElementById('timer'); // Timer Box
 let timer = 15; // CountDown Timer
@@ -65,7 +66,7 @@ function userInfo(event) {
 
   event.target.name.value = '';
 
-  new UserProfile(userEntry);
+  // new UserProfile(userEntry);
 
   localStorage.setItem('savedUserData', JSON.stringify(new UserProfile(userEntry, timer))); // Saving name to Local Storage
   // parentName.remove();   ####### Removes Form when done
@@ -77,17 +78,18 @@ parentName.addEventListener('submit', userInfo);
 
 // Display timer option function
 function userTimer(event) {
+  console.log('inside userTimer');
   event.preventDefault();
   let userTimer = event.target.timer.value;
 
   // event.target.timer.value = '';
 
-  new UserProfile(userArray.name, userTimer);
+  // new UserProfile(userArray[0].name, userTimer);
 
-  localStorage.setItem('savedUserData', JSON.stringify(new UserProfile(userArray.name, userTimer))); // Saving name to Local Storage
+  localStorage.setItem('savedUserData', JSON.stringify(new UserProfile(userArray[0].name, userTimer))); // Saving name to Local Storage
   // parentName.remove(); ####### Removes Form when done
 }
-parentName.addEventListener('submit', userTimer);
+parentTimer.addEventListener('submit', userTimer);
 
 
 
@@ -104,10 +106,10 @@ function countTimer1() { // adds 1 after function name because it will not run f
 
 function numberTimer() {
   // append number to screen
-  timerBox.textContent = timer; // Adding Number to HTML
+  timerBox.textContent = userArray[2].timer; // Adding Number to HTML
   timerDOM.appendChild(timerBox); // Append to Box
-  timer--;
-  if (timer === 0){
+  userArray[2].timer--;
+  if (userArray[2].timer === 0){
     clearInterval(countdown); // Stops countdown
     clearTimer(); // Clears last number
     window.location.href = 'html/readings_&_reflections.html'; // Moves to next page
