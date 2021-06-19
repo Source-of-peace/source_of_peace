@@ -68,13 +68,26 @@ function userInfo(event) {
   new UserProfile(userEntry);
 
   localStorage.setItem('savedUserData', JSON.stringify(new UserProfile(userEntry, timer))); // Saving name to Local Storage
-  parentName.remove();
+  // parentName.remove();   ####### Removes Form when done
   // STRETCH: If statement -- If local storage present, do not show name form
   let user = new UserProfile(userEntry);
   user.displayWelcomeGreeting();
 }
 parentName.addEventListener('submit', userInfo);
 
+// Display timer option function
+function userTimer(event) {
+  event.preventDefault();
+  let userTimer = event.target.timer.value;
+
+  // event.target.timer.value = '';
+
+  new UserProfile(userArray.name, userTimer);
+
+  localStorage.setItem('savedUserData', JSON.stringify(new UserProfile(userArray.name, userTimer))); // Saving name to Local Storage
+  // parentName.remove(); ####### Removes Form when done
+}
+parentName.addEventListener('submit', userTimer);
 
 
 
