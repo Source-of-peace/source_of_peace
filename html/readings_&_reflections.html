@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/chapter-menu.css">
+  <link rel="stylesheet" href="../css/reflections-menu.css">
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
@@ -21,11 +22,11 @@
     <div id="dropdown">
       <button id="dropbtn">Nav:</button>
       <div id="dropdown-content">
-      <a href="../index.html">Home:</a>  
-      <a href="readings_&_reflections.html">Readings & Reflection:</a>
-      <a href="saved_reflections.html">Saved Reflections:</a>
-      <a href="settings.html">Settings:</a>
-      <a href="about_us.html">About Us:</a>
+        <a href="../index.html">Home:</a>
+        <a href="readings_&_reflections.html">Readings & Reflection:</a>
+        <a href="saved_reflections.html">Saved Reflections:</a>
+        <a href="settings.html">Settings:</a>
+        <a href="about_us.html">About Us:</a>
       </div>
   </header>
   <main>
@@ -34,13 +35,16 @@
         <!-- <div id="container"></div> -->
         <div id="readings-container">
           <!-- <div id="back"><p>B</p></div> -->
-          <div id="chapter-back"><p>B</p></div>
+          <div id="chapter-back">
+            <p>B</p>
+          </div>
           <!-- <div id="finder-menu"></div> -->
           <div id="reader-chapter">
             <!-- <button id="menu">Menu:</button> -->
             <button id="chapter">Chapter:</button>
             <!-- <div id="menu-content"></div> -->
             <div id="chapter-content">
+
               <label>Choose a Chapter:
                 <select class="readingChapters" name="readings">
                   <option value="">Select One …</option>
@@ -56,19 +60,42 @@
         </div>
       </div>
       <div id="div-right">
-        <h3>PLACE HOLDER</h3>
-        <div id="reflectionsEntry">
-          <form id="userLog">
-            <fieldset>
-              <legend></legend>
-              <label>Enter Your Relfections:
-                <textarea type="text" required name="reflectionLog" rows="20" cols="50"></textarea>
-              </label>
-              <button type="submit">SAVE</button>
-            </fieldset>
-          </form>
+        <!-- <div id="container"></div> -->
+        <div id="reflections-container">
+          <!-- <div id="back"><p>B</p></div> -->
+          <div id="reflections-back">
+            <p>B</p>
+          </div>
+          <!-- <div id="finder-menu"></div> -->
+          <div id="past-reflections">
+            <!-- <button id="menu">Menu:</button> -->
+            <button id="Reflections">reflections:</button>
+            <!-- <div id="menu-content"></div> -->
+            <div id="reflections-content">
+              <a href="#">#</a>
+              <a href="#">#</a>
+              <a href="#">#</a>
+            </div>
+          </div>
+          <div id="reflections-forward">
+            <P>F</P>
+          </div>
+          <div id="reflectionsEntry">
+            <form id="userLog">
+              <fieldset>
+                <legend></legend>
+                <label>
+                  <textarea type="text" required name="reflectionLog" spellcheck="true"
+                    placeholder="Enter you reflections here." rows="25" cols="50"></textarea>
+                </label>
+                <button type="submit">SAVE</button>
+              </fieldset>
+            </form>
+          </div>
+
         </div>
       </div>
+
     </section>
   </main>
   <footer>
