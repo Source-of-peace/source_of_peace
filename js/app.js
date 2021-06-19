@@ -13,7 +13,7 @@ const userArray = [];
 
 
 // User Constructor
-let UserProfile = function (name) {
+let UserProfile = function (name, timer) {
   this.name = name;
   this.timer = timer;
   // this.logs = logs;
@@ -51,13 +51,13 @@ UserProfile.prototype.displayWelcomeGreeting = function () {
   let greetingDisplay = document.createElement('article');
   greetingDisplay.setAttribute('id','welcomeGreeting');
   greetingDisplay.innerHTML = greeting;
-  divLeft.appendChild(greetingDisplay)
+  divLeft.appendChild(greetingDisplay);
 };
-    
+
 
 
 // UserProfile.prototype.callPrototypeFunctions = function () {
-  
+
 // };
 
 // Display name function
@@ -69,21 +69,24 @@ function userInfo(event) {
 
   new UserProfile(userEntry);
 
-  localStorage.setItem('savedUserData', JSON.stringify(new UserProfile(userEntry))); // Saving name to Local Storage
+  localStorage.setItem('savedUserData', JSON.stringify(new UserProfile(userEntry, timer))); // Saving name to Local Storage
   parentName.remove();
-// STRETCH: If statement -- If local storage present, do not show name form
+  // STRETCH: If statement -- If local storage present, do not show name form
   let user = new UserProfile(userEntry);
   user.displayWelcomeGreeting();
 }
 parentName.addEventListener('submit', userInfo);
-
-
 
 function startTimer(event) {
   countTimer1(); // Start Timer when Button Clicked
   sectionButton.remove(); // Remove Button when button CLicked
 }
 buttonID.addEventListener('click', startTimer);
+
+function countTimer1() { // adds 1 after function name because it will not run for some reason
+  // setInterval starts the function with a set time in between
+  countdown = setInterval(numberTimer, 1000);
+}
 
 function numberTimer() {
   // append number to screen
@@ -104,31 +107,4 @@ function clearTimer() {
   timerDOM.appendChild(timerBox);
 }
 
-function countTimer1() { // adds 1 after function name because it will not run for some reason
-  // setInterval starts the function with a set time in between
-  countdown = setInterval(numberTimer, 1000);
-}
 
-// Display Greeting
-// this.name + time() save to variable
-// Greeting Function: Display variable(name)through DOM on HTML page through an ID
-// *** Stretch goal 30 second
-
-//Function to allow next chapter of Tao to load
-//Save reflections in local storage
-//Clear reflection page once submitted for next entry
-
-// When recording each log on Zen page
-// Attach index's to each (refer to lab 14b shopping cart)
-// display 2 tables
-// Left table will have past Logs
-// Right table will display logs in detail
-// Attach EventListeners with their ID on each log on the left
-// when eventListeners(logs) are clicked display that log with quotes on right side
-// Each log will have an index
-// It will display the whole log with which quote(s) they were written next to(which were seen by user when they clicked save log)
-// Remove that eventListener when log is shown
-// Either have a close function to close out detailed log, or when clicking on a new log
-//      will re-populate the right table with the new log
-
-// quotes function
