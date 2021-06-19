@@ -29,7 +29,7 @@ UserProfile.prototype.displayWelcomeGreeting = function () {
   let greeting;
 
   if (hourNow > 18) {
-    greeting = `Good Evening ${this.name}, <b/>
+    greeting = `Good Evening ${this.name}, <br/>
      Making Time For Your Self Even After A Long Day, <br/> Will Result In Positive Habits, <br/>
     To Form.`;
   } else if (hourNow > 12) {
