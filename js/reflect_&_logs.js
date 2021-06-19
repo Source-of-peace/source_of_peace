@@ -1,3 +1,9 @@
+'use strict';
+// Global Variables
+let userLogForm = document.getElementById('userLog'); // User Log Form
+let retrievedLogs = localStorage.getItem('savedUserLog');
+
+
 // save object to local storage
 // On new page bring down local storage
 //     Example:
@@ -51,6 +57,18 @@
 // try to find a way to link it through the constructor
 //    We have to bring down the constructor information first
 //    unpack it then save the logs along side it
+
+// User Log Textbox Function
+function userLog(event) {
+  event.preventDefault(); 
+  let userLogEntry = event.target.reflectionLog.value; // grabs data from textbox
+
+  event.target.reflectionLog.value = ''; // clears out box after sumbiting
+
+  localStorage.setItem('savedUserLog', JSON.stringify(userLogEntry)); // Saving Logs to Local Storage
+}
+userLogForm.addEventListener('submit', userLog);
+
 
 
 
