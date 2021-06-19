@@ -54,8 +54,6 @@ UserProfile.prototype.displayWelcomeGreeting = function () {
   divLeft.appendChild(greetingDisplay);
 };
 
-
-
 // UserProfile.prototype.callPrototypeFunctions = function () {
 
 // };
@@ -76,6 +74,9 @@ function userInfo(event) {
   user.displayWelcomeGreeting();
 }
 parentName.addEventListener('submit', userInfo);
+
+
+
 
 function startTimer(event) {
   countTimer1(); // Start Timer when Button Clicked
