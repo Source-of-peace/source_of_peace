@@ -13,7 +13,7 @@ const userArray = [];
 
 
 // User Constructor
-let UserProfile = function (name) {
+let UserProfile = function (name, timer) {
   this.name = name;
   this.timer = timer;
   // this.logs = logs;
@@ -29,7 +29,7 @@ UserProfile.prototype.displayWelcomeGreeting = function () {
   let greeting;
 
   if (hourNow > 18) {
-    greeting = `Good Evening ${this.name}, <b/>
+    greeting = `Good Evening ${this.name}, <br/>
      Making Time For Your Self Even After A Long Day, <br/> Will Result In Positive Habits, <br/>
     To Form.`;
   } else if (hourNow > 12) {
@@ -69,7 +69,7 @@ function userInfo(event) {
 
   new UserProfile(userEntry);
 
-  localStorage.setItem('savedUserData', JSON.stringify(new UserProfile(userEntry))); // Saving name to Local Storage
+  localStorage.setItem('savedUserData', JSON.stringify(new UserProfile(userEntry, timer))); // Saving name to Local Storage
   parentName.remove();
   // STRETCH: If statement -- If local storage present, do not show name form
   let user = new UserProfile(userEntry);
