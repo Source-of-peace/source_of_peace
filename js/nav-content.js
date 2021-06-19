@@ -1,7 +1,7 @@
 'use strict'
 
 let back = document.getElementById('back');
-// let finderMenu = document.getElementById('finder-menu');
+
 let forward = document.getElementById('forward')
 
 let readingsArray = ['A','B','C'];
@@ -24,6 +24,6 @@ function forwardClick(event) {
   if (readingIndex === 2) {
     readingIndex === 0
   };
-  console.log(readingsArray);
+  console.log(readingsArray[readingIndex]);
 }
 forward.addEventListener('click', forwardClick);
