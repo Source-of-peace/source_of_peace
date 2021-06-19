@@ -16,10 +16,10 @@ const userArray = [];
 let UserProfile = function (name) {
   this.name = name;
   this.timer = timer;
-  // this.logs = logs;
+  this.logs = ['a', 'b', 'c'];
   userArray.push(this);
   // this.callPrototypeFunctions();
-
+  this.tauQuotes();
 };
 
 // This is where you put all prototype functions for the UserProfile construer!!!!
@@ -109,15 +109,37 @@ function countTimer1() { // adds 1 after function name because it will not run f
   countdown = setInterval(numberTimer, 1000);
 }
 
-// Display Greeting
-// this.name + time() save to variable
-// Greeting Function: Display variable(name)through DOM on HTML page through an ID
-// *** Stretch goal 30 second
+// ###### Readings Page ######
+// create 2 boxes
+// left box will quotes
+// right box will be logs
+// ###### Left Side ######
 
-//Function to allow next chapter of Tao to load
-//Save reflections in local storage
-//Clear reflection page once submitted for next entry
+// DONE: Place Quotes in an Array through constructor function
+// Display array in a Box for user to see
 
+
+// Event Function to allow next chapter of Tao to load
+//        Might be done with just the event listener
+// Have a button, box, or click on the quote/box with an event listener
+//      Have a variable++ inside event listener?
+// Make it so the user can go back to page one after cycling through
+//    Example, after last quote, goes back to first quote
+//    Make the position in the array[i]
+//    Make [i] a global variable
+//    [i]++ when event listener is clicked
+//    if i === last quote
+//      make i === 0
+// Stretch: Make it load from the beginning again
+// ###### Right Side ######
+// Create a form
+// Have a big enough box for user to type long passages
+// On submit
+//      Save reflections in local storage
+//      Save the quote that is being shown along side the log
+//
+// Clear reflection page once submitted for next entry???????????????
+// ###### Recording Page ######
 // When recording each log on Zen page
 // Attach index's to each (refer to lab 14b shopping cart)
 // display 2 tables
@@ -130,5 +152,22 @@ function countTimer1() { // adds 1 after function name because it will not run f
 // Remove that eventListener when log is shown
 // Either have a close function to close out detailed log, or when clicking on a new log
 //      will re-populate the right table with the new log
-
 // quotes function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
