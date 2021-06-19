@@ -13,7 +13,7 @@ const userArray = [];
 
 
 // User Constructor
-let UserProfile = function (name) {
+let UserProfile = function (name, timer) {
   this.name = name;
   this.timer = timer;
   // this.logs = logs;
@@ -69,7 +69,7 @@ function userInfo(event) {
 
   new UserProfile(userEntry);
 
-  localStorage.setItem('savedUserData', JSON.stringify(new UserProfile(userEntry))); // Saving name to Local Storage
+  localStorage.setItem('savedUserData', JSON.stringify(new UserProfile(userEntry, timer))); // Saving name to Local Storage
   parentName.remove();
   // STRETCH: If statement -- If local storage present, do not show name form
   let user = new UserProfile(userEntry);

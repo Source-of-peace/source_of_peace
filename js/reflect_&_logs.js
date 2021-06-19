@@ -7,6 +7,28 @@
 // once they have exeriecne save that to local storage
 // save to local store
 
+let userLogArray = [];
+// User Constructor
+let UserLogs = function (name, timer, logs) {
+  this.name = name;
+  this.logs = logs;
+  this.timer = timer;
+  userLogArray.push(this);
+};
+
+let retrievedUser = JSON.parse(localStorage['savedUserData']);
+
+new UserLogs (retrievedUser.name, retrievedUser.timer, 'Recorded Logs go here');
+
+// let userLog = event.target.log.value;
+let userQuote = 'Try out this new log please';
+new UserLogs (retrievedUser.name, retrievedUser.timer, userQuote);
+
+localStorage.setItem('savedUserlogs', JSON.stringify(userLogArray));
+
+// ##### Grabbing stuff from Array #######
+// userLogArray[0].name
+
 // Everything on TOP will be information purpose
 
 
