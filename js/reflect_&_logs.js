@@ -39,24 +39,41 @@ let readingIndex = 0
 
 readingsArray[readingIndex];
 
-function backClick(event) {
-  readingIndex--;
-  if (readingIndex === 0) {
-    readingIndex === 2
-  };
-  console.log(readingsArray[readingIndex]);
-}
-back.addEventListener('click', backClick);
+// function backClick(event) {
+//   readingIndex--;
+//   if (readingIndex === 0) {
+//     readingIndex === 2
+//   };
+//   console.log(readingsArray[readingIndex]);
+// }
+// back.addEventListener('click', backClick);
 
-function forwardClick(event) {
-  readingIndex++;
-  if (readingIndex === 2) {
-    readingIndex === 0
-  };
-  console.log(readingsArray[readingIndex]);
-}
-forward.addEventListener('click', forwardClick);
+// function forwardClick(event) {
+//   readingIndex++;
+//   if (readingIndex === 2) {
+//     readingIndex === 0
+//   };
+//   console.log(readingsArray[readingIndex]);
+// }
+// forward.addEventListener('click', forwardClick);
 
+function populateForm() {
+  const selectChapter = document.getElementById('chapter-content');
+  const optionDiv = document.createElement('div');
+  for (let i = 0; i < userLogArray.length; i++ ) {
+    let option = document.createElement('option');
+    option.textContent = userLogArray[i].name;
+    option.value = userLogArray[i].name;
+    optionDiv.appendChild(option);
+  }
+  selectChapter.appendChild(optionDiv);
+  optionDiv.addEventListener('click', optionClick);
+}
+
+function optionClick(){
+  alert('clicked');
+}
+populateForm();
 
 
 
