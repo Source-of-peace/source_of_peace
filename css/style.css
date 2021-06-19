@@ -1,17 +1,19 @@
+/* body all pages */
 body {
   background-color: black;
   color: rgb(167, 155, 211);
 }
 
+/* Background image all pages */
 body {
   background-image: url(../img/purple-flower.png);
   background-repeat: no-repeat;
   background-size: 100vh;
   background-position: center;
   background-attachment: local;
-    
 }
 
+/* Header all pages */
 header {
   background-color: rgba(68, 68, 68, 0);
   height: 100px;
@@ -22,7 +24,7 @@ header {
   margin-top: 33px;
 }
 
-
+/* Header logo all pages */
 header img {
   position: relative;
   margin-top: 15px;
@@ -31,6 +33,7 @@ header img {
   width: 111px;
 }
 
+/* Header page name all pages */
 h1 {
  font-family: 'Lobster Two', cursive;
  font-size: 3em;
@@ -40,87 +43,7 @@ h1 {
  margin-top: 15px;
 }
 
-#header-nav {
-  float: right;
-}
-
-footer {
-  height: 100px;
-  background-color: rgba(68, 68, 68, 0);
-  opacity: 0.8;
-  border-radius: 15px;
-  width: 90%;
-  margin: auto;
-  margin-bottom: 15px;
-}
-
-footer img {
-  position: relative;
-  margin-top: 15px;
-  float: left;
-  margin-left: 55px;
-  width: 111px;
-}
-
-h2 {
-  font-family: 'Viaoda Libre', cursive;
-  position: relative;
-  margin-left: 44%;
-  padding-top: 50px;
-}
-
-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-#div-left{
-  /* margin-right: 130px; */
-  height: 90vh;
-  width: 50vw;
-  padding-left: 50px;
-  padding-top: 50px;
-}
-
-#div-right{
-  /* margin-left: 130px; */
-  height: 90vh;
-  width: 50vw;
-}
-
-#welcomeGreeting {
-  color: rgb(54, 37, 209);
-  font-size: 2em;
-  font-weight: bolder;
-  line-height: 1.5;
-  font-family: 'Charm', cursive;
-  padding-top: 50px;
-  width: 40%;
-}
-
-  .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
-
-#timer {
-  border: 4px solid white;
-  width: 100px;
-  height: 100px;
-  margin-left: 300px;
-  margin-top: 30px;
-}
-
-#button {
-  border: 4px solid white;
-  width: 100px;
-  height: 100px;
-  margin-left: 300px;
-  margin-top: 30px;
-}
-
+/* drop down nav all pages */
 #dropbtn {
   background-color: #4c8caf4d;
   color: white;
@@ -131,6 +54,7 @@ section {
   border-radius: 30%;
 }
 
+/* drop down nav all pages */
 #dropdown {
   position: relative;
   /* display: inline-block; */
@@ -138,6 +62,7 @@ section {
   padding-right: 50px;
 }
 
+/* drop down nav all pages */
 #dropdown-content {
   display: none;
   position: absolute;
@@ -147,6 +72,7 @@ section {
   z-index: 1;
 }
 
+/* drop down nav all pages */
 #dropdown-content a {
   color: rgb(255, 255, 255);
   padding: 12px 16px;
@@ -154,16 +80,123 @@ section {
   display: block;
 }
 
+/* drop down nav all pages */
 #dropdown-content a:hover {
   background-color: #f1f1f12e
 }
 
+/* drop down nav all pages */
 #dropdown:hover #dropdown-content {
   display: block;
 }
 
+/* drop down nav all pages */
 #dropdown:hover #dropbtn {
   background-color: #3e8e4144;
 }
 
+/* Footer all pages */
+footer {
+  height: 100px;
+  background-color: rgba(68, 68, 68, 0);
+  opacity: 0.8;
+  border-radius: 15px;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 15px;
+  margin-top: 30vh;
+  position: absolute;
+}
+
+/* Footer logo all pages */
+footer img {
+  position: relative;
+  margin-top: 15px;
+  float: left;
+  margin-left: 55px;
+  width: 111px;
+}
+
+/* Footer mindful tip all pages */
+h2 {
+  font-family: 'Viaoda Libre', cursive;
+  position: relative;
+  margin-left: 44%;
+  padding-top: 50px;
+}
+
+/* section grid all pages */
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* div left all pages */
+#div-left{
+  height: 90vh;
+  width: 50vw;
+  padding-left: 50px;
+  padding-top: 50px;
+}
+
+/* div right all pages */
+#div-right{
+  height: 90vh;
+  width: 50vw;
+  padding-left: 50px;
+  padding-top: 50px;
+}
+
+/* welcome greeting index page */
+#welcomeGreeting {
+  color: rgb(54, 37, 209);
+  font-size: 2em;
+  font-weight: bolder;
+  line-height: 1.5;
+  font-family: 'Charm', cursive;
+  padding-top: 50px;
+  width: 40%;
+}
+
+/* Timer on index page */
+#timer {
+  border: 4px solid white;
+  width: 100px;
+  height: 100px;
+  margin-left: 300px;
+  margin-top: 30px;
+}
+
+/* button for timer */
+#button {
+  border: 4px solid white;
+  width: 100px;
+  height: 100px;
+  margin-left: 300px;
+  margin-top: 30px;
+}
+
+/* about us div left */
+.about-1 {
+  padding-top: 50px;
+  line-height: 1.5;
+}
+
+/* about div right */
+.about-2 {
+padding-top: 200px;
+margin-left: 35%;
+line-height: 1.5;
+}
+
+/* about us images */
+.selfie {
+  width: 150px;
+  border-radius: 50%;
+}
+
+/* anchor tag all pages */
+a {
+  text-decoration: none;
+}
 
