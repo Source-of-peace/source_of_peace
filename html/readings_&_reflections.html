@@ -41,10 +41,18 @@
             <button id="chapter">Chapter:</button>
             <!-- <div id="menu-content"></div> -->
             <div id="chapter-content">
-              <a href="#">#</a> 
+              <label>Choose a Chapter:
+                <select class="readingChapters" name="readings">
+                  <option value="">Select One …</option>
+                  <option value="Chapter 1">Chapter 1</option>
+                  <option value="Chapter 2">Chapter 2</option>
+                  <option value="Chapter 3">Chapter 3</option>
+                </select>
+              </label> 
             </div>
           </div>
           <div id="chapter-forward"><P>F</P></div>
+          <article id="taoReadings"></article>
         </div>
       </div>
       <div id="div-right">
@@ -69,7 +77,7 @@
   </footer>
 
   <script src="../js/reflect_&_logs.js"></script>
-  <script src="./js/nav-content.js"></script>
+  <!-- <script src="./js/nav-content.js"></script> -->
 </body>
 
 </html>

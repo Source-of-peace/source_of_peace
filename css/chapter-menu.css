@@ -86,3 +86,16 @@
 #reader-chapter:hover #chapter {
   background-color: #3e8e4144;
 }
+
+
+/* Inside the Box to paste Tao Readings */
+#taoReadings {
+  margin-top: 200px;
+  /* text-align: 1.5; */
+  font-size: 1.5em;
+}
+
+aside {
+  border: white 1px solid;
+  margin-top: 5px;
+}
