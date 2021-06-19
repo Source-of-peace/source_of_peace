@@ -6,7 +6,7 @@ let forward = document.getElementById('forward')
 
 let readingsArray = ['A','B','C'];
 
-let readingIndex = 0
+let readingIndex = 0;
 
 readingsArray[readingIndex];
 
