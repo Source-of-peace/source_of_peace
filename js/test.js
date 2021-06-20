@@ -17,3 +17,6 @@
 //   }
 //   // return '<h3>' + greeting + '</h3>';
 // }
+
+  // localStorage.clear('cart');
+}
