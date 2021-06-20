@@ -5,7 +5,6 @@ let back = document.getElementById('chapter-back');
 let forward = document.getElementById('chapter-forward');
 let chapters = document.getElementById('taoReadings');
 
-
 let userLogArray = [];
 // User Constructor
 let UserLogs = function (name, timer, logs) {
@@ -76,8 +75,6 @@ function optionClick(){
 }
 populateForm();
 
-
-
 function backClick(event) {
   clearReading();
   readingIndex--;
@@ -115,15 +112,3 @@ function clearReading() {
     chapters.removeChild(firstChild1);
   }
 }
-
-// const selectElement = document.querySelector('.readingChapters');
-
-
-// selectElement.addEventListener('change', (event) => {
-
-//   event.target.value
-
-//   const result = document.querySelector('.result');
-
-//   result.textContent = `You like ${}`;
-// });

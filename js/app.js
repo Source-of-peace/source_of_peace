@@ -17,10 +17,7 @@ const userArray = [];
 let UserProfile = function (name, timer) {
   this.name = name;
   this.timer = timer;
-  // this.logs = logs;
   userArray.push(this);
-  // this.callPrototypeFunctions();
-
 };
 
 // This is where you put all prototype functions for the UserProfile construer!!!!
@@ -55,10 +52,6 @@ UserProfile.prototype.displayWelcomeGreeting = function () {
   divLeft.appendChild(greetingDisplay);
 };
 
-// UserProfile.prototype.callPrototypeFunctions = function () {
-
-// };
-
 // Display name function
 function userInfo(event) {
   event.preventDefault();
@@ -66,11 +59,8 @@ function userInfo(event) {
 
   event.target.name.value = '';
 
-  // new UserProfile(userEntry);
 
   localStorage.setItem('savedUserData', JSON.stringify(new UserProfile(userEntry, timer))); // Saving name to Local Storage
-  // parentName.remove();   ####### Removes Form when done
-  // STRETCH: If statement -- If local storage present, do not show name form
   let user = new UserProfile(userEntry);
   user.displayWelcomeGreeting();
 }
