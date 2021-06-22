@@ -1,13 +1,15 @@
 'use strict';
 // Global Variables
 let userLogForm = document.getElementById('userLog'); // User Log Form
-let back = document.getElementById('chapter-back');
-let forward = document.getElementById('chapter-forward');
 let chapters = document.getElementById('taoReadings');
-let userLogEntry;
-let clear = document.getElementById('reflections-back');
-let readingIndex = 0;
 let DOM = document.querySelector('textarea');
+let userLogEntry;
+let readingIndex = 0;
+
+// EventListener Variables
+let forward = document.getElementById('chapter-forward');
+let back = document.getElementById('chapter-back');
+let clear = document.getElementById('reflections-back');
 
 let userLogArray = [];
 // User Constructor
@@ -83,8 +85,7 @@ function optionClick(){
 populateForm();
 
 function clearDOM(event) {
-  console.log('in clearDOM');
-  DOM.innerHTML = '';
+  document.getElementById('output').value = '';
 }
 
 function backClick(event) {
@@ -121,6 +122,8 @@ function clearReading() {
   }
 }
 
+
+
 // Function Calls
 populateForm();
 displayTaoReadings();
@@ -128,14 +131,3 @@ back.addEventListener('click', backClick);
 forward.addEventListener('click', forwardClick);
 clear.addEventListener('click', clearDOM);
 
-
-
-const selectElement = document.querySelector('.readingChapters');
-
-selectElement.addEventListener('change', (event) => {
-  const result = document.querySelector('.result');
-  let resultDOM = document.createElement('p');
-  resultDOM.textContent = userLogEntry;
-  result.appendChild(resultDOM);
-
-});
