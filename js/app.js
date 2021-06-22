@@ -50,7 +50,7 @@ UserProfile.prototype.displayWelcomeGreeting = function () {
     But I Don't Know What Time It Is, <br/>
     Just Breath And It Will All Be Ok.`;
   }
-  let divLeft = document.getElementById('div-left');
+  let divLeft = document.getElementById('left-content');
   let greetingDisplay = document.createElement('article');
   greetingDisplay.setAttribute('id','welcomeGreeting');
   greetingDisplay.innerHTML = greeting;
@@ -70,6 +70,7 @@ function userInfo(event) {
   // STRETCH: If statement -- If local storage present, do not show name form
   let user = new UserProfile(userEntry);
   user.displayWelcomeGreeting();
+  countTimer1();
 }
 parentName.addEventListener('submit', userInfo);
 
@@ -92,11 +93,11 @@ selectElement.addEventListener('change', (event) => {
 });
 
 
-function startTimer(event) {
-  countTimer1(); // Start Timer when Button Clicked
-  sectionButton.remove(); // Remove Button when button CLicked
-}
-buttonID.addEventListener('click', startTimer);
+// function startTimer(event) {
+//   // countTimer1(); // Start Timer when Button Clicked
+//   sectionButton.remove(); // Remove Button when button CLicked
+// }
+// buttonID.addEventListener('click', startTimer);
 
 function countTimer1() { // adds 1 after function name because it will not run for some reason
   // setInterval starts the function with a set time in between
@@ -111,7 +112,7 @@ function numberTimer() {
   if (userArray[2].timer === 0){
     clearInterval(countdown); // Stops countdown
     clearTimer(); // Clears last number
-    window.location.href = 'html/readings_&_reflections.html'; // Moves to next page
+    window.location.href = 'html/readings_and_reflections.html'; // Moves to next page
   }
 }
 

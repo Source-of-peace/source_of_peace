@@ -158,7 +158,6 @@ section {
   line-height: 1.5;
   font-family: 'Charm', cursive;
   padding-top: 50px;
-  width: 40%;
 }
 
 /* Timer on index page */
@@ -289,4 +288,21 @@ h3 {
   line-height: 1.1;
   overflow: scroll;
   margin-bottom: 200px;
+}
+
+#left-content {
+  background-image: url(../img/bookBackgroundTextBox.jpeg);
+  width: 400px;
+  height: 375px;
+  opacity: 0.75;
+  color: black;
+  border-radius: 15%;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 15px;
+  padding-bottom: 30px;
+  box-shadow: 20px 20px rgba(128, 128, 128, 0.357);
+  line-height: 1.1;
+  overflow: scroll;
+  margin-bottom: 100px;
 }
