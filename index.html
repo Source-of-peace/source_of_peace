@@ -35,11 +35,26 @@
   <main>
     <section>
       <div id="div-left">
-        <form id="userName">
-          <fieldset>
-            <legend></legend>
-            <label>Enter Your Name:
-              <input type="text" required name="name">
+        <div id="left-content">
+          <form id="userName">
+            <fieldset>
+              <legend></legend>
+              <label>Enter Your Name:
+                <input type="text" required name="name">
+              </label>
+              <button type="submit">SUBMIT</button>
+            </fieldset>
+          </form>
+          <form id="userTimer">
+            <label>Select A Focused Breathing Length Of Time:
+              <select class="timerSelector" name="timer">
+                <option value="">Select One …</option>
+                <option value="60">1 Minute</option>
+                <option value="120">2 Minutes</option>
+                <option value="180">3 Minutes</option>
+                <option value="240">4 Minutes</option>
+                <option value="300">5 Minutes</option>
+              </select>
             </label>
             <button type="submit">SUBMIT</button>
           </fieldset>
@@ -72,6 +87,7 @@
         <section id="timer">Timer Here</section>
       </div>
       <div id="div-right">
+        <section id="timer"></section>
       </div>
     </section>
   </main>

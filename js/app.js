@@ -52,7 +52,7 @@ UserProfile.prototype.displayWelcomeGreeting = function () {
     But I Don't Know What Time It Is, <br/>
     Just Breath And It Will All Be Ok.`;
   }
-  let divLeft = document.getElementById('div-left');
+  let divLeft = document.getElementById('left-content');
   let greetingDisplay = document.createElement('article');
   greetingDisplay.setAttribute('id','welcomeGreeting');
   greetingDisplay.innerHTML = greeting;
@@ -74,6 +74,7 @@ function userInfo(event) {
 
   let user = new UserProfile(userEntry);
   user.displayWelcomeGreeting();
+
   hideElements('userName');
   removeAttribute('userTimer');
 }
@@ -88,12 +89,12 @@ selectElement.addEventListener('change', (event) => {
   removeAttribute('button');
 });
 
-
 function startTimer(event) {
   countTimer1(); // Start Timer when Button Clicked
   hideElements('button');
 }
 buttonID.addEventListener('click', startTimer);
+
 
 function countTimer1() { // adds 1 after function name because it will not run for some reason
   // setInterval starts the function with a set time in between
@@ -107,6 +108,7 @@ function numberTimer() {
   userArray[2].timer--;
   if (userArray[2].timer === 0){
     clearInterval(countdown); // Stops countdown
+
     window.location.href = 'html/readings_and_reflections.html'; // Moves to next page
   }
 }
