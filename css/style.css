@@ -235,10 +235,10 @@ h3 {
 
 ::-webkit-scrollbar {
   display: none;
+}
 
 .hidden {
   visibility: hidden;
-
 }
 
 #about-2 {
