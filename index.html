@@ -28,7 +28,6 @@
         <a href="index.html">Home:</a>
         <a href="./html/readings_and_reflections.html">Readings & Reflection:</a>
         <a href="./html/saved_reflections.html">Saved Reflections:</a>
-        <a href="#">Settings:</a>
         <a href="./html/about_us.html">About Us:</a>
       </div>
     </div>
@@ -57,9 +56,35 @@
                 <option value="300">5 Minutes</option>
               </select>
             </label>
-          </form>
-          <!-- <section id="timer"></section> -->
-        </div>
+            <button type="submit">SUBMIT</button>
+          </fieldset>
+        </form>
+        <form id="userTimer">
+
+
+          <label>Select a Time:
+            <select id="timerSelector" name="timer">
+              <option value="">Select One …</option>
+              <option value="60">1 Minute</option>
+              <option value="120">2 Minutes</option>
+              <option value="180">3 Minutes</option>
+              <option value="240">4 Minutes</option>
+              <option value="300">5 Minutes</option>
+            </select>
+          </label>
+
+          <!-- <fieldset>
+            <legend></legend>
+            <label>Enter A Length Of Time for Focused Breathing Meditation:
+              <input type="text" required name="timer">
+            </label>
+            <button type="submit">SUBMIT</button>
+          </fieldset> -->
+        </form>
+        <section id="button">Button goes here
+          <button id="buttonID">Start Timer</button>
+        </section>
+        <section id="timer">Timer Here</section>
       </div>
       <div id="div-right">
         <section id="timer"></section>
