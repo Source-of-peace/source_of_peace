@@ -1,9 +1,7 @@
 'use strict';
-
 // Global Variables
 
 let parentName = document.getElementById('userName'); // Form
-let parentTimer = document.getElementById('userTimer');
 let timerBox = document.createElement('p'); // Timer number
 let timerDOM = document.getElementById('timer'); // Timer Box
 let timer = 15; // CountDown Timer
@@ -11,7 +9,8 @@ let sectionButton = document.getElementById('button'); // Button Box
 let buttonID = document.getElementById('buttonID'); // Button
 let countdown; // Setinterval Countdown
 const userArray = [];
-
+const selectElement = document.querySelector('.timerSelector'); // Timer Drop Down
+// let parentTimer = document.getElementById('userTimer');
 
 // User Constructor
 let UserProfile = function (name, timer) {
@@ -20,7 +19,13 @@ let UserProfile = function (name, timer) {
   userArray.push(this);
 };
 
-// This is where you put all prototype functions for the UserProfile construer!!!!
+// Stretch Goal
+// If there is a saved name, do not show the name form
+// if (userArray >= 1) {
+//   // ####### Removes Form when done
+//   parentName.remove();
+// }
+
 UserProfile.prototype.displayWelcomeGreeting = function () {
   let today = new Date();
   let hourNow = today.getHours();
@@ -59,28 +64,32 @@ function userInfo(event) {
 
   event.target.name.value = '';
 
-
   localStorage.setItem('savedUserData', JSON.stringify(new UserProfile(userEntry, timer))); // Saving name to Local Storage
+  parentName.remove(); // ####### Removes Form when done
+
+  // STRETCH: If statement -- If local storage present, do not show name form
   let user = new UserProfile(userEntry);
   user.displayWelcomeGreeting();
 }
 parentName.addEventListener('submit', userInfo);
 
 // Display timer option function
-function userTimer(event) {
-  console.log('inside userTimer');
-  event.preventDefault();
-  let userTimer = event.target.timer.value;
+// function userTimer(event) { // No not Need
+//   event.preventDefault();
+//   let userTimer = event.target.timer.value;
 
-  // event.target.timer.value = '';
+//   event.target.timer.value = '';
 
-  // new UserProfile(userArray[0].name, userTimer);
+//   localStorage.setItem('savedUserData', JSON.stringify(new UserProfile(userArray[0].name, userTimer))); // Saving name to Local Storage
+//   parentName.remove(); // ####### Removes Form when done
+// }
+// parentTimer.addEventListener('submit', userTimer);
 
-  localStorage.setItem('savedUserData', JSON.stringify(new UserProfile(userArray[0].name, userTimer))); // Saving name to Local Storage
-  // parentName.remove(); ####### Removes Form when done
-}
-parentTimer.addEventListener('submit', userTimer);
-
+// Sretch Goal Timer:
+selectElement.addEventListener('change', (event) => {
+  let userTimer = parseInt(event.target.value);
+  localStorage.setItem('savedUserData', JSON.stringify(new UserProfile(userArray[0].name, userTimer)));
+});
 
 
 function startTimer(event) {
