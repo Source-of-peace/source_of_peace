@@ -10,7 +10,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100vh;
   background-position: center;
-  background-attachment: local;
+  background-attachment: fixed;
 }
 
 /* Header all pages */
