@@ -5,7 +5,6 @@ let back = document.getElementById('chapter-back');
 let forward = document.getElementById('chapter-forward');
 let chapters = document.getElementById('taoReadings');
 
-
 let userLogArray = [];
 // User Constructor
 let UserLogs = function (name, timer, logs) {
@@ -34,13 +33,14 @@ let readingObjectArray = [
   {
     chapter: 'Chapter: 1',
     readings: [
-      'Simplicity, patience, compassion.',
-      'These three are your greatest treasures.',
-      ' Simple in actions and thoughts, you return to the source of being. ',
-      'Patient with both friends and enemies,',
-      ' you accord with the way things are.',
-      ' Compassionate toward yourself,',
-      ' you reconcile all beings in the world.'
+      '1: The Tao source of life that we often talk about is beyond the power of words and labels to define or enclose,',
+      '2: While it is true that we employ words and labels to outline our experience, they are not absolute and cannot define the absolute,',
+      '3: When it all began there were no words or labels,',
+      '4: These things were created out of the union of preception and perception,',
+      '5: Whether a person who is awake in play sees the heart of life or it\'s surface manifestations is hardly important because they are exactly the same point in space and time,',
+      '6: The words and labels that we use make us think that they are different but only so we can talk about it from the outside of ourselves,',
+      '7: If you feel as though you really need a name then call it the wonderwork and watch one miracle talk to another in a language that you can feel but not understand,',
+      '8: It is playful to approach something that is logically unknowable.',
     ]
   },
   {
@@ -59,7 +59,7 @@ let readingObjectArray = [
 let readingIndex = 0;
 
 function populateForm() {
-  const selectChapter = document.getElementById('chapter-content');
+  const selectChapter = document.getElementById('taoReadings');
   const optionDiv = document.createElement('div');
   for (let i = 0; i < userLogArray.length; i++ ) {
     let option = document.createElement('option');
@@ -75,8 +75,6 @@ function optionClick(){
   alert('clicked');
 }
 populateForm();
-
-
 
 function backClick(event) {
   clearReading();
@@ -115,15 +113,3 @@ function clearReading() {
     chapters.removeChild(firstChild1);
   }
 }
-
-// const selectElement = document.querySelector('.readingChapters');
-
-
-// selectElement.addEventListener('change', (event) => {
-
-//   event.target.value
-
-//   const result = document.querySelector('.result');
-
-//   result.textContent = `You like ${}`;
-// });
