@@ -74,7 +74,8 @@
 
 /* Textbox CSS */
 textarea {
-  width: 394px;
+  width: 400px;
+  height: 400px;
   opacity: inherit;
   background-image: url(../img/bookBackgroundTextBox.jpeg);
   opacity: 0.75;

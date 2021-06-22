@@ -45,6 +45,7 @@ h1 {
 
 /* drop down nav all pages */
 #dropbtn {
+  margin-right: 100px;
   background-color: #4c8caf4d;
   color: white;
   padding: 16px;
@@ -104,7 +105,7 @@ footer {
   width: 90%;
   margin: auto;
   margin-bottom: 15px;
-  margin-top: 30vh;
+  margin-top: 60vh;
   position: absolute;
   text-align: justify;
 }
@@ -202,5 +203,90 @@ a {
   text-decoration: none;
 }
 
+h4 {
+  font-weight: bolder;
+  padding-top: 10px;
+}
 
+h3 {
+  font-weight: bolder;
+}
 
+.link {
+  padding-top: 10px;
+}
+
+#about-1 {
+  background-image: url(../img/bookBackgroundTextBox.jpeg);
+  width: 400px;
+  height: 375px;
+  opacity: 0.75;
+  color: black;
+  border-radius: 15%;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 5px;
+  padding-bottom: 30px;
+  box-shadow: 20px 20px rgba(128, 128, 128, 0.357);
+  line-height: 1.1;
+  overflow: scroll;
+  margin-bottom: 100px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#about-2 {
+  background-image: url(../img/bookBackgroundTextBox.jpeg);
+  width: 400px;
+  height: 375px;
+  opacity: 0.75;
+  color: black;
+  border-radius: 15%;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 5px;
+  padding-bottom: 30px;
+  box-shadow: 20px 20px rgba(128, 128, 128, 0.357);
+  line-height: 1.1;
+  overflow: scroll;
+  margin-bottom: 100px;
+}
+
+#about-3 {
+  margin-top: 200px;
+  margin-left: 145px;
+  background-image: url(../img/bookBackgroundTextBox.jpeg);
+  width: 400px;
+  height: 375px;
+  opacity: 0.75;
+  color: black;
+  border-radius: 15%;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 5px;
+  padding-bottom: 30px;
+  box-shadow: 20px 20px rgba(128, 128, 128, 0.357);
+  line-height: 1.1;
+  overflow: scroll;
+  margin-bottom: 100px;
+}
+
+#about-4 {
+  margin-left: 145px;
+  background-image: url(../img/bookBackgroundTextBox.jpeg);
+  width: 400px;
+  height: 375px;
+  opacity: 0.75;
+  color: black;
+  border-radius: 15%;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 5px;
+  padding-bottom: 30px;
+  box-shadow: 20px 20px rgba(128, 128, 128, 0.357);
+  line-height: 1.1;
+  overflow: scroll;
+  margin-bottom: 200px;
+}
