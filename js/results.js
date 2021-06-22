@@ -15,7 +15,7 @@ function displayLogs () {
     rightDiv.appendChild(logQuotes);
   }
 }
-
+ 
 function displayWelcomeGreeting () {
   let today = new Date();
   let hourNow = today.getHours();
