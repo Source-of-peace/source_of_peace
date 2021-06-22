@@ -57,11 +57,15 @@ UserProfile.prototype.displayWelcomeGreeting = function () {
   divLeft.appendChild(greetingDisplay);
 };
 
+function capitalizeFirstLetter(string) {
+  return string[0].toUpperCase() + string.slice(1);
+}
+
 // Display name function
 function userInfo(event) {
   event.preventDefault();
   let userEntry = event.target.name.value;
-
+  userEntry = capitalizeFirstLetter(userEntry);
   event.target.name.value = '';
 
   localStorage.setItem('savedUserData', JSON.stringify(new UserProfile(userEntry, timer))); // Saving name to Local Storage
@@ -111,7 +115,7 @@ function numberTimer() {
   if (userArray[2].timer === 0){
     clearInterval(countdown); // Stops countdown
     clearTimer(); // Clears last number
-    window.location.href = 'html/readings_&_reflections.html'; // Moves to next page
+    window.location.href = 'html/readings_and_reflections.html'; // Moves to next page
   }
 }
 
