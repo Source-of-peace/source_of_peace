@@ -84,7 +84,7 @@ parentName.addEventListener('submit', userInfo);
 // Timer:
 selectElement.addEventListener('change', (event) => {
   let userTimer = parseInt(event.target.value);
-  localStorage.setItem('savedUserData', JSON.stringify(new UserProfile(userArray[0].name, Timer)));
+  localStorage.setItem('savedUserData', JSON.stringify(new UserProfile(userArray[0].name, userTimer)));
   hideElements('userTimer');
   removeAttribute('button');
 });
