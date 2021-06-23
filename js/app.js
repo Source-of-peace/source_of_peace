@@ -5,20 +5,20 @@ let parentName = document.getElementById('userName'); // Form
 let timerBox = document.createElement('p'); // Timer number
 let timerDOM = document.getElementById('timer'); // Timer Box
 let timer = 15; // CountDown Timer
-let sectionButton = document.getElementById('button'); // Button Box
 let buttonID = document.getElementById('buttonID'); // Button
 let countdown; // Setinterval Countdown
 const userArray = [];
-const selectElement = document.querySelector('.timerSelector'); // Timer Drop Down
-// let parentTimer = document.getElementById('userTimer');
+const selectElement = document.getElementById('timerSelector'); // Timer Drop Down
+
+// Setting hidden Classes to elements
+document.getElementById('userTimer').setAttribute('class', 'hidden');
+document.getElementById('button').setAttribute('class', 'hidden');
 
 // User Constructor
 let UserProfile = function (name, timer) {
   this.name = name;
   this.timer = timer;
-  // this.logs = logs;
   userArray.push(this);
-  // this.callPrototypeFunctions();
 };
 
 // Stretch Goal
@@ -52,53 +52,50 @@ UserProfile.prototype.displayWelcomeGreeting = function () {
     But I Don't Know What Time It Is, <br/>
     Just Breath And It Will All Be Ok.`;
   }
-  let divLeft = document.getElementById('div-left');
+  let divRight = document.getElementById('div-right');
   let greetingDisplay = document.createElement('article');
   greetingDisplay.setAttribute('id','welcomeGreeting');
+  greetingDisplay.setAttribute('class', 'putBoxHere');
   greetingDisplay.innerHTML = greeting;
-  divLeft.appendChild(greetingDisplay);
+  divRight.appendChild(greetingDisplay);
 };
+
+function capitalizeFirstLetter(string) {
+  return string[0].toUpperCase() + string.slice(1);
+}
 
 // Display name function
 function userInfo(event) {
   event.preventDefault();
   let userEntry = event.target.name.value;
-
+  userEntry = capitalizeFirstLetter(userEntry);
   event.target.name.value = '';
 
   localStorage.setItem('savedUserData', JSON.stringify(new UserProfile(userEntry, timer))); // Saving name to Local Storage
-  parentName.remove(); // ####### Removes Form when done
 
-  // STRETCH: If statement -- If local storage present, do not show name form
   let user = new UserProfile(userEntry);
   user.displayWelcomeGreeting();
+
+  hideElements('userName');
+  removeAttribute('userTimer');
 }
 parentName.addEventListener('submit', userInfo);
 
-// Display timer option function
-// function userTimer(event) { // No not Need
-//   event.preventDefault();
-//   let userTimer = event.target.timer.value;
 
-//   event.target.timer.value = '';
-
-//   localStorage.setItem('savedUserData', JSON.stringify(new UserProfile(userArray[0].name, userTimer))); // Saving name to Local Storage
-//   parentName.remove(); // ####### Removes Form when done
-// }
-// parentTimer.addEventListener('submit', userTimer);
-
-// Sretch Goal Timer:
+// Timer:
 selectElement.addEventListener('change', (event) => {
   let userTimer = parseInt(event.target.value);
   localStorage.setItem('savedUserData', JSON.stringify(new UserProfile(userArray[0].name, userTimer)));
+  hideElements('userTimer');
+  removeAttribute('button');
 });
-
 
 function startTimer(event) {
   countTimer1(); // Start Timer when Button Clicked
-  sectionButton.remove(); // Remove Button when button CLicked
+  hideElements('button');
 }
 buttonID.addEventListener('click', startTimer);
+
 
 function countTimer1() { // adds 1 after function name because it will not run for some reason
   // setInterval starts the function with a set time in between
@@ -112,16 +109,15 @@ function numberTimer() {
   userArray[2].timer--;
   if (userArray[2].timer === 0){
     clearInterval(countdown); // Stops countdown
-    clearTimer(); // Clears last number
-    window.location.href = 'html/readings_&_reflections.html'; // Moves to next page
+
+    window.location.href = 'html/readings_and_reflections.html'; // Moves to next page
   }
 }
 
-function clearTimer() {
-  // clear number on screen
-  let timerBox = document.querySelector('p');
-  timerBox.textContent = '';
-  timerDOM.appendChild(timerBox);
+function hideElements(id) {
+  document.getElementById(id).setAttribute('class', 'hidden');
 }
 
-
+function removeAttribute(id) {
+  document.getElementById(id).removeAttribute('class');
+}

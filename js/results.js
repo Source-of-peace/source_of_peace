@@ -6,11 +6,12 @@
 // click on box
 // give text content to div-right
 let retrievedUser = JSON.parse(localStorage['savedUserLogs']);
-let rightDiv = document.getElementById('div-right');
+let rightDiv = document.getElementById('savedLog');
 
 function displayLogs () {
   for (let i = 0; i < retrievedUser.length; i++) {
     let logQuotes = document.createElement('p');
+    logQuotes.setAttribute('id', 'savedlog');
     logQuotes.textContent = retrievedUser[i].logs;
     rightDiv.appendChild(logQuotes);
   }
@@ -22,6 +23,8 @@ function displayWelcomeGreeting () {
   let greeting;
   if (hourNow > 18) {
     greeting = `Good Evening ${retrievedUser[0].name}, <br/>
+    Take a momment to reflect on your past logs. <br> Change never happens in a day,<br> but beginning starts everyday.
+
     Making Time For Your Self Even After A Long Day, <br/> Will Result In Positive Habits, <br/>
     To Form.`;
   } else if (hourNow > 12) {
@@ -39,7 +42,7 @@ function displayWelcomeGreeting () {
     But I Don't Know What Time It Is, <br/>
     Just Breath And It Will All Be Ok.`;
   }
-  let divLeft = document.getElementById('div-left');
+  let divLeft = document.getElementById('div-right');
   let greetingDisplay = document.createElement('article');
   greetingDisplay.setAttribute('id','welcomeGreeting');
   greetingDisplay.innerHTML = greeting;

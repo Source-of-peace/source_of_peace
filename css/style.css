@@ -10,7 +10,7 @@ body {
   background-repeat: no-repeat;
   background-size: 100vh;
   background-position: center;
-  background-attachment: local;
+  background-attachment: fixed;
 }
 
 /* Header all pages */
@@ -22,6 +22,7 @@ header {
   width: 90%;
   margin: auto;
   margin-top: 33px;
+  text-align: justify;
 }
 
 /* Header logo all pages */
@@ -29,7 +30,6 @@ header img {
   position: relative;
   margin-top: 15px;
   float: left;
-  margin-left: 55px;
   width: 111px;
 }
 
@@ -39,12 +39,13 @@ h1 {
  font-size: 3em;
  color: rgb(94, 2, 131);
  position: relative;
- margin-left: 38.5%;
+ margin-left: 37.5%;
  margin-top: 15px;
 }
 
 /* drop down nav all pages */
 #dropbtn {
+  margin-right: 100px;
   background-color: #4c8caf4d;
   color: white;
   padding: 16px;
@@ -104,8 +105,9 @@ footer {
   width: 90%;
   margin: auto;
   margin-bottom: 15px;
-  margin-top: 30vh;
+  margin-top: 60vh;
   position: absolute;
+  text-align: justify;
 }
 
 /* Footer logo all pages */
@@ -121,12 +123,13 @@ footer img {
 h2 {
   font-family: 'Viaoda Libre', cursive;
   position: relative;
-  text-align: center;
+  padding-left: 49%;
   padding-top: 50px;
 }
 
 /* section grid all pages */
 section {
+  padding-top: 100px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -141,39 +144,68 @@ section {
 
 /* div right all pages */
 #div-right{
-  height: 90vh;
-  width: 50vw;
+  /* height: 90vh;
+  width: 50vw; */
   padding-left: 50px;
   padding-top: 50px;
 }
 
 /* welcome greeting index page */
-#welcomeGreeting {
+#welcomeGreeting, #savedlog{
   color: rgb(54, 37, 209);
   font-size: 2em;
   font-weight: bolder;
   line-height: 1.5;
   font-family: 'Charm', cursive;
   padding-top: 50px;
-  width: 40%;
 }
 
 /* Timer on index page */
 #timer {
-  border: 4px solid white;
+  /* border: 4px solid white; */
   width: 100px;
   height: 100px;
-  margin-left: 300px;
+  margin-left: 130px;
   margin-top: 30px;
+  padding-top: 20px;
+  font-size: 5em;
+  color: blueviolet;
+}
+
+#buttonID, #nameSubmit, #timerSelector{
+  background: #7a1f95;
+  transition-property: background;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  /* height: 50px; */
+  border-radius: 15px;
+}
+
+#buttonID:hover {
+  background: #29ffdb;
+}
+
+#userTimer {
+  font-size: 2em;
+  color: darkcyan;
+}
+
+#timerSelector {
+  width: 200px;
+  font-size: .7em;
+  color: #29ffdb;
 }
 
 /* button for timer */
 #button {
-  border: 4px solid white;
-  width: 100px;
-  height: 100px;
-  margin-left: 300px;
+  /* border: 4px solid white; */
+  width: 120px;
+  height: 70px;
+  margin-left: 130px;
   margin-top: 30px;
+  padding-top: 10px;
+  font-size: 2em;
+  color: blueviolet;
 }
 
 /* about us div left */
@@ -200,3 +232,154 @@ a {
   text-decoration: none;
 }
 
+
+h4 {
+  font-weight: bolder;
+  padding-top: 10px;
+}
+
+h3 {
+  font-weight: bolder;
+}
+
+.link {
+  padding-top: 10px;
+}
+
+#about-1 {
+  background-image: url(../img/bookBackgroundTextBox.jpeg);
+  width: 400px;
+  height: 375px;
+  opacity: 0.75;
+  color: black;
+  border-radius: 15%;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 5px;
+  padding-bottom: 30px;
+  box-shadow: 20px 20px rgba(128, 128, 128, 0.357);
+  line-height: 1.1;
+  overflow: scroll;
+  margin-bottom: 100px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#about-2 {
+  background-image: url(../img/bookBackgroundTextBox.jpeg);
+  width: 400px;
+  height: 375px;
+  opacity: 0.75;
+  color: black;
+  border-radius: 15%;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 5px;
+  padding-bottom: 30px;
+  box-shadow: 20px 20px rgba(128, 128, 128, 0.357);
+  line-height: 1.1;
+  overflow: scroll;
+  margin-bottom: 100px;
+}
+
+#about-3 {
+  margin-top: 200px;
+  /* margin-left: 145px; */
+  background-image: url(../img/bookBackgroundTextBox.jpeg);
+  width: 400px;
+  height: 375px;
+  opacity: 0.75;
+  color: black;
+  border-radius: 15%;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 5px;
+  padding-bottom: 30px;
+  box-shadow: 20px 20px rgba(128, 128, 128, 0.357);
+  line-height: 1.1;
+  overflow: scroll;
+  margin-bottom: 100px;
+}
+
+#about-4 {
+  /* margin-left: 145px; */
+  background-image: url(../img/bookBackgroundTextBox.jpeg);
+  width: 400px;
+  height: 375px;
+  opacity: 0.75;
+  color: black;
+  border-radius: 15%;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 5px;
+  padding-bottom: 30px;
+  box-shadow: 20px 20px rgba(128, 128, 128, 0.357);
+  line-height: 1.1;
+  overflow: scroll;
+  margin-bottom: 200px;
+}
+
+#left-content, #savedLog, .putBoxHere{
+  background-image: url(../img/bookBackgroundTextBox.jpeg);
+  width: 400px;
+  height: 375px;
+  opacity: 0.75;
+  color: black;
+  border-radius: 15%;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 15px;
+  padding-bottom: 30px;
+  box-shadow: 20px 20px rgba(128, 128, 128, 0.357);
+  line-height: 1.1;
+  /* overflow: scroll; */
+  margin-bottom: 100px;
+}
+
+#div-right {
+  margin-left: 400px;
+  margin-top: 40px;
+  overflow: auto;
+  
+}
+/* #savedLog {
+  background-image: url(../img/bookBackgroundTextBox.jpeg);
+  width: 400px;
+  height: 375px;
+  opacity: 0.75;
+  color: black;
+  border-radius: 15%;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 15px;
+  padding-bottom: 30px;
+  box-shadow: 20px 20px rgba(128, 128, 128, 0.357);
+  line-height: 1.1;
+  overflow: scroll;
+  margin-bottom: 100px;
+} */
+
+#displayLog {
+  float: right;
+  text-align: right;
+  position: relative; top: 400px;
+}
+
+#userLog {
+  margin-right: 400px;
+}
+
+#reflections-container {
+  /* width: 100px; */
+  height: 600px;
+  margin: auto;
+  margin-right: 400px;
+  /* height: 0vh;
+  width: 0vw; */
+}
