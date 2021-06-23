@@ -49,14 +49,11 @@ let readingObjectArray = [
   },
   {
     chapter: 'Chapter: 2',
-    readings: ['Knowing others is intelligence;',
-      'knowing yourself is true wisdom.',
-      'Mastering others is strength;',
-      ' mastering yourself is true power.']
+    readings: ['',]
   },
   {
     chapter: 'Chapter: 3',
-    readings: ['Those who know do not speak. Those who speak do not know.']
+    readings: ['']
   },
 ];
 
