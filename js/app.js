@@ -52,11 +52,12 @@ UserProfile.prototype.displayWelcomeGreeting = function () {
     But I Don't Know What Time It Is, <br/>
     Just Breath And It Will All Be Ok.`;
   }
-  let divLeft = document.getElementById('left-content');
+  let divRight = document.getElementById('div-right');
   let greetingDisplay = document.createElement('article');
   greetingDisplay.setAttribute('id','welcomeGreeting');
+  greetingDisplay.setAttribute('class', 'putBoxHere');
   greetingDisplay.innerHTML = greeting;
-  divLeft.appendChild(greetingDisplay);
+  divRight.appendChild(greetingDisplay);
 };
 
 function capitalizeFirstLetter(string) {

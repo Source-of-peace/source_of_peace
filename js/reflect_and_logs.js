@@ -49,11 +49,11 @@ let readingObjectArray = [
   },
   {
     chapter: 'Chapter: 2',
-    readings: ['',]
+    readings: ['1: As a matter of course,','2: If you decide something is beautiful then something else immediately becomes ugly without you realizing it,','3: If you enter a thought shape that dictates the parameters of what is a condition of health then the parameters of a condition of unhealthy come forward,','4: You create death when you decide what constitutes life, You create difficulties when you create ease, You create long when you decide what is short, You create a low tone when you sing a high one,','5: were you aware of the power of your own lifeforce,','6: When looking to the left different tones create harmony,','7: Whether you are truly clever or merely awake manage your affairs without actions and rely on fluid thinking rather than stagnant thought,','8: Adapt to conditions that present themselves and remember that specialization is not the useful way,','9: Continuously create instead of acquiring and enjoy what you create,','10: You are important only if it is not important to you.']
   },
   {
     chapter: 'Chapter: 3',
-    readings: ['']
+    readings: ['1: Be wary of exalting the wise and sophisticated for it becomes not unlike pouring two liquids into a container meant for one,','2: Consider the relatives wisdom of displaying treasures that remain untouched in temporary keeping,','3: Authentic learning released through insight nurtures the heart spirit and does not disturb the balance,','4: A sound leader helps the populace to be open minded and self aware,','5: With open heart spirits strong bodyminds even temperaments and thought clarity,','6: These people make their own choices and can naturally resist those meddling fools who try to steal their ability to respond,','No force no strain,','8: Natural action without deeds is the equilibrium of mankind.']
   },
 ];
 

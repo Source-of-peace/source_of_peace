@@ -6,47 +6,50 @@
 // click on box
 // give text content to div-right
 let retrievedUser = JSON.parse(localStorage['savedUserLogs']);
-let rightDiv = document.getElementById('displayLog');
+let rightDiv = document.getElementById('savedLog');
 
 function displayLogs () {
   for (let i = 0; i < retrievedUser.length; i++) {
     let logQuotes = document.createElement('p');
+    logQuotes.setAttribute('id', 'savedlog');
     logQuotes.textContent = retrievedUser[i].logs;
     rightDiv.appendChild(logQuotes);
   }
 }
 
-// function displayWelcomeGreeting () {
-//   let today = new Date();
-//   let hourNow = today.getHours();
-//   let greeting;
-//   if (hourNow > 18) {
-//     greeting = `Good Evening ${retrievedUser[0].name}, <br/>
-//     Making Time For Your Self Even After A Long Day, <br/> Will Result In Positive Habits, <br/>
-//     To Form.`;
-//   } else if (hourNow > 12) {
-//     greeting = `Good Afternoon ${retrievedUser[0].name}, <br/>  
-//     Whatever The Weather, <br/>
-//     It's A Beautiful Day To Just Take In A Deep Breath And Remember, <br/>
-//     It's Free.`;
-//   } else if (hourNow > 0) {
-//     greeting = `Good Morning ${retrievedUser[0].name}, <br/>
-//     It's A Great Day To Make Time For Your Self, <br/>
-//     Keep Setting Healthy Habit's.`;
-//   } else {
-//     greeting = `${retrievedUser[0].name}, <br/>
-//     I Don't Want To Alarm You! <br/>
-//     But I Don't Know What Time It Is, <br/>
-//     Just Breath And It Will All Be Ok.`;
-//   }
-//   let divLeft = document.getElementById('div-left');
-//   let greetingDisplay = document.createElement('article');
-//   greetingDisplay.setAttribute('id','welcomeGreeting');
-//   greetingDisplay.innerHTML = greeting;
-//   divLeft.appendChild(greetingDisplay);
-// }
+function displayWelcomeGreeting () {
+  let today = new Date();
+  let hourNow = today.getHours();
+  let greeting;
+  if (hourNow > 18) {
+    greeting = `Good Evening ${retrievedUser[0].name}, <br/>
+    Take a momment to reflect on your past logs. <br> Change never happens in a day,<br> but beginning starts everyday.
+
+    Making Time For Your Self Even After A Long Day, <br/> Will Result In Positive Habits, <br/>
+    To Form.`;
+  } else if (hourNow > 12) {
+    greeting = `Good Afternoon ${retrievedUser[0].name}, <br/>  
+    Whatever The Weather, <br/>
+    It's A Beautiful Day To Just Take In A Deep Breath And Remember, <br/>
+    It's Free.`;
+  } else if (hourNow > 0) {
+    greeting = `Good Morning ${retrievedUser[0].name}, <br/>
+    It's A Great Day To Make Time For Your Self, <br/>
+    Keep Setting Healthy Habit's.`;
+  } else {
+    greeting = `${retrievedUser[0].name}, <br/>
+    I Don't Want To Alarm You! <br/>
+    But I Don't Know What Time It Is, <br/>
+    Just Breath And It Will All Be Ok.`;
+  }
+  let divLeft = document.getElementById('div-right');
+  let greetingDisplay = document.createElement('article');
+  greetingDisplay.setAttribute('id','welcomeGreeting');
+  greetingDisplay.innerHTML = greeting;
+  divLeft.appendChild(greetingDisplay);
+}
 displayLogs();
-// displayWelcomeGreeting();
+displayWelcomeGreeting();
 
 // ###### Recording Page ######
 // When recording each log on Zen page
