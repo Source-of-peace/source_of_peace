@@ -139,16 +139,16 @@ section {
   height: 90vh;
   width: 50vw;
   padding-left: 50px;
-  padding-top: 50px;
+  margin-top: 60px;
 }
 
 /* div right all pages */
-#div-right{
+/* #div-right{ */
   /* height: 90vh;
   width: 50vw; */
-  padding-left: 50px;
-  padding-top: 50px;
-}
+  /* padding-left: 50px;
+  padding-top: 50px; */
+/* } */
 
 /* welcome greeting index page */
 #welcomeGreeting, #savedlog{
@@ -187,7 +187,7 @@ section {
 
 #userTimer {
   font-size: 2em;
-  color: darkcyan;
+  color: rgb(5, 78, 78);
 }
 
 #timerSelector {
@@ -343,10 +343,9 @@ h3 {
 }
 
 #div-right {
-  margin-left: 400px;
-  margin-top: 40px;
+  margin-left: 160px;
+  margin-top: 50px;
   overflow: auto;
-  
 }
 /* #savedLog {
   background-image: url(../img/bookBackgroundTextBox.jpeg);
@@ -378,7 +377,7 @@ h3 {
 #reflections-container {
   /* width: 100px; */
   height: 600px;
-  margin: auto;
+  /* margin: auto; */
   margin-right: 400px;
   /* height: 0vh;
   width: 0vw; */
